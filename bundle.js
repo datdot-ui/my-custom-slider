@@ -20,10 +20,18 @@ button.innerText = "click me"
 button.onclick = event => {
     console.log('form.value1:', form.value1)
     console.log('form.value2:', form.value2)
+    const element = document.querySelector('.list') || document.createElement('div')
+    element.classList.add('list')
+    element.innerHTML = `<div>
+        <p>Slider1 value = ${form.value1}</p>
+        <p>Slider2 value = ${form.value2}</p>
+    </div>`
+    document.body.appendChild(element)
 }
 document.body.appendChild(slider1)
 document.body.appendChild(slider2)
 document.body.appendChild(button)
+
 },{"../":"/Users/fannieyeh/prj/my-custom-slider/src/my-custom-slider.js"}],"/Users/fannieyeh/prj/my-custom-slider/node_modules/csjs-inject/csjs.js":[function(require,module,exports){
 (function (global){
 'use strict';
